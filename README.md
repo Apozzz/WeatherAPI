@@ -27,7 +27,7 @@ A list of libraries, tools and frameworks used in project.
 
 Instructions to run project and set it up.
 
-### Installation
+### Installation and set up
 
 1. Clone repository
    ```sh
@@ -56,6 +56,9 @@ Instructions to run project and set it up.
    ```sh
    php artisan db:seed
    ```
+   
+### Project launch and tests
+
 To run tests you have to populate database first
 and then run command
    ```sh
