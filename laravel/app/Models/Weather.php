@@ -10,6 +10,7 @@ class Weather extends Model
 {
     use HasFactory;
     public $table = 'weathers';
+    public $timestamps = false;
 
     /**
      * Creates belongsToMany relationship with Product class Models
