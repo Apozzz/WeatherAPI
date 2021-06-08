@@ -69,7 +69,7 @@ To run project itself run command
    php artisan serve
    ```
    
-### Use of API service
+## Use of API service
 
 Add this part to the current URL.
    ```sh 
