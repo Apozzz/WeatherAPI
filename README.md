@@ -41,14 +41,13 @@ Instructions to run project and set it up.
    ```sh
    composer install
    ```
-4. Delete laravel.log file in laravel\storage\logs
-5. Change .env.example file to .env and modify it
+4. Change .env.example file to .env and modify it
    according to your database + set up.
-6. Generate new key
+5. Generate new key
    ```sh
    php artisan key:generate
    ```
-7. If database is not set up, then run
+6. If database is not set up, then run
    ```sh
    php artisan migrate:fresh
    ```
