@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         Product::factory(13)->create();
 
@@ -31,6 +31,11 @@ class DatabaseSeeder extends Seeder
             );
         });
     }
+
+    /**
+     * Function that returns hardcoded weathers data array to be seeded.
+     * @return string[]
+     */
     protected function getWeatherData(): array
     {
         return [
