@@ -2,17 +2,11 @@
 
 namespace Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Models\Product;
 
 class ProductModelTest extends TestCase
 {
-    public function testProductModelExists(): void
-    {
-        $this->assertInstanceOf(Product::class, new Product());
-    }
-
     public function testProductHasName(): void
     {
         $product = Product::factory()->create(['name' => 'Random_Name']);

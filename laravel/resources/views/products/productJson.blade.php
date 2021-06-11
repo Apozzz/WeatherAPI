@@ -1,1 +1,1 @@
-<pre>{{$json}}</pre>
+{{$json}}
