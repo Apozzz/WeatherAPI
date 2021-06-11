@@ -7,11 +7,6 @@ use App\Models\Weather;
 
 class WeatherModelTest extends TestCase
 {
-    public function testWeatherModelExists(): void
-    {
-        $this->assertInstanceOf(Weather::class, new Weather());
-    }
-
     public function testWeatherHasName(): void
     {
         $weather = new Weather;

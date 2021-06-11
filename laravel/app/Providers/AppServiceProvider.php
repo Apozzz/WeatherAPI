@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+use App\Services\ProductRecommendationService;
+use App\Services\WeatherService\DayTypeWeatherService;
+use App\Services\WeatherService\MeteoApiClient;
 use Illuminate\Support\ServiceProvider;
+use App\Http\Controllers\ProductsController;
+use App\Caching\ProductsCache;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,9 +16,14 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        //
+        $this->app->singleton(ProductsController::class, function () {
+            return new ProductsController(new ProductsCache(
+                new ProductRecommendationService(
+                    new DayTypeWeatherService(
+                        new MeteoApiClient()))));
+        });
     }
 
     /**
@@ -21,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         //
     }
